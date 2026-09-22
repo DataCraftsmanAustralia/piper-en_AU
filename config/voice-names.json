@@ -1,0 +1,35 @@
+{
+  "_comment": [
+    "Serving names and speech rates for en_AU-librivox-medium, keyed by the",
+    "LibriVox narrator name that piper recorded in the trained .onnx.json.",
+    "",
+    "Edit freely -- this is the only place serving names and rates live.",
+    "Speaker IDs are NEVER written here: deploy/2-voice-map.py reads those",
+    "from the trained config, because piper assigns them at training time and",
+    "they do not follow the export roster order.",
+    "",
+    "A value can be a plain name, or an object with a length_scale.",
+    "",
+    "length_scale is piper's speech-rate control, in the config's `inference`",
+    "block. 1.0 is the trained rate; HIGHER IS SLOWER. For reference, the",
+    "en_GB-vctk voice already on this server ships at 1.4.",
+    "",
+    "Rates here are set per narrator because pacing turned out to be a property",
+    "of how each volunteer actually reads, not of how much audio they",
+    "contributed -- the model reproduces their natural speed faithfully.",
+    "Assessed by ear 2026-09-20: tully and clancy rush, marlo sometimes does,",
+    "everyone else is fine at the trained rate."
+  ],
+
+  "ophelia_darcy": "matilda",
+  "magdalena": "kirra",
+  "kirsty_leishman": { "name": "tully", "length_scale": 1.25 },
+  "jenno": "bindi",
+  "lucy_burgoyne_1950_2014": { "name": "marlo", "length_scale": 1.08 },
+  "jane_bennett": "willow",
+
+  "timothy_ferguson": "banjo",
+  "son_of_the_exiles": { "name": "clancy", "length_scale": 1.25 },
+  "algy_pug": "angus",
+  "howard_skyman": "flynn"
+}

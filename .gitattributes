@@ -1,0 +1,17 @@
+# These scripts run on Linux. Checking them out with CRLF breaks the shebang,
+# which is why the README used to open with `sed -i 's/\r$//' *.sh *.py`.
+# Forcing LF here makes that step unnecessary.
+*.sh   text eol=lf
+*.py   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.csv  text eol=lf
+*.jsonl text eol=lf
+*.txt  text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+*.wav  binary
+*.onnx binary
+*.ckpt binary

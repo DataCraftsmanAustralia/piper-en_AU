@@ -14,8 +14,9 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+# NB: the stock template ignores lib/ and lib64/. Here lib/ is real source
+# (lib/piper-au.sh, sourced by every stage script), so those two rules are
+# deliberately absent.
 parts/
 sdist/
 var/
@@ -216,3 +217,32 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+dataset/
+source-data/
+
+# Trainer clone and its venv
+piper1-gpl/
+
+# Training state
+runs/
+cache/
+logs/
+archive/
+base-ckpt/
+out/
+
+# Exported voices: .onnx, the trained .onnx.json (speaker map, rate variants)
+# and the serving yaml that deploy/2-voice-map.py writes.
+voices/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+*.log
+*.ckpt
+*.onnx

@@ -1,0 +1,35 @@
+{
+  "_comment": [
+    "The approved narrator roster. This file, not how many hours a reader has,",
+    "decides who ends up in the model.",
+    "",
+    "The source corpus is a set of Australian TITLES read by international",
+    "LibriVox volunteers, so an Australian book is no guarantee of an Australian",
+    "narrator. Accent has to be checked by ear: run prepare/2-export.py",
+    "--audition and listen before adding anyone. The largest reader in this",
+    "corpus (11.79 h) was rejected at that gate after being the obvious pick on",
+    "every number available.",
+    "",
+    "reader  the exact name in the dataset's reader column. prepare/1-census.py",
+    "        lists them with hours, clip counts and transcript quality.",
+    "sex     drives the female-only projection and the deploy tables.",
+    "",
+    "Speaker labels are the reader name slugged, so 'Lucy Burgoyne (1950-2014)'",
+    "becomes lucy_burgoyne_1950_2014. Speaker IDS are assigned by piper during",
+    "training and written to the trained config -- read them from there",
+    "(deploy/2-voice-map.py), never from the order of this file."
+  ],
+
+  "readers": [
+    { "reader": "Magdalena",              "sex": "female" },
+    { "reader": "Kirsty Leishman",        "sex": "female" },
+    { "reader": "Ophelia Darcy",          "sex": "female" },
+    { "reader": "jenno",                  "sex": "female" },
+    { "reader": "Lucy Burgoyne (1950-2014)", "sex": "female" },
+    { "reader": "Jane Bennett",           "sex": "female" },
+    { "reader": "Timothy Ferguson",       "sex": "male" },
+    { "reader": "Son of the Exiles",      "sex": "male" },
+    { "reader": "Algy Pug",               "sex": "male" },
+    { "reader": "Howard Skyman",          "sex": "male" }
+  ]
+}

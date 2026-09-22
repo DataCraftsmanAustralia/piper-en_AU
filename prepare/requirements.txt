@@ -1,0 +1,5 @@
+# Only prepare/ needs these. The training environment is built by
+# train/0-setup.sh, which installs torch and piper1-gpl itself.
+#
+#   pip install -r prepare/requirements.txt
+pyarrow>=15
